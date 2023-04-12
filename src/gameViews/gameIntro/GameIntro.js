@@ -1,4 +1,3 @@
-import { Fragment } from "react";
 import "./GameIntro.css";
 
 export const GameIntro = (setGameViewIs) => {
@@ -11,13 +10,13 @@ export const GameIntro = (setGameViewIs) => {
   };
 
   return (
-    <Fragment className="view-game-intro">
+    <div className="view-game-intro">
       <h1 className="tittle-game-intro">Welcome to the {gameTittle} v.0.01!</h1>
       <h4 className="tittle-description">Description:</h4>
       <p className="description-text">{description}</p>
       <button className="start-adventure-button" onClick={changeViewHandler}>
         Start Adventure
       </button>
-    </Fragment>
+    </div>
   );
 };

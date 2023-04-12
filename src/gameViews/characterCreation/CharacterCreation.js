@@ -23,7 +23,7 @@ export const CharacterCreation = (
   }
 
   return (
-    <Fragment className="view-character-creation">
+    <div className="view-character-creation">
       <div className="character-creation-page-tittle">
         <h1>Character Selection</h1>
       </div>
@@ -36,18 +36,24 @@ export const CharacterCreation = (
 
       <div>
         {CharacterClasses.map((className) => (
-          <button key={className} onClick={() => handleClassClick(className)}>
+          <button
+            className="class-name-buttons"
+            key={className}
+            onClick={() => handleClassClick(className)}
+          >
             {className}
           </button>
         ))}
       </div>
       {isClassSelected && (
         <Fragment>
-          <div>{CharacterClassDescription[playerClass]}</div>
+          <div className="character-class-description">
+            {CharacterClassDescription[playerClass]}
+          </div>
           <p>Are you sure you want to be a {playerClass} ?</p>
           <button onClick={handleConfirmClassClick}>Confirm</button>
         </Fragment>
       )}
-    </Fragment>
+    </div>
   );
 };

@@ -1,4 +1,3 @@
-import { Fragment } from "react";
 import "./Battleground.css";
 
 export function Battleground(
@@ -11,7 +10,7 @@ export function Battleground(
   playerClass
 ) {
   return (
-    <Fragment className="view-battleground">
+    <div className="view-battleground">
       <div className="battleground-page-tittle">
         <h1>💀 Battlegrounds 💀</h1>
       </div>
@@ -35,6 +34,6 @@ export function Battleground(
           </div>
         </div>
       </div>
-    </Fragment>
+    </div>
   );
 }

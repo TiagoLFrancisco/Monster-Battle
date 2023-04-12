@@ -1,6 +1,8 @@
 .view-game-intro {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  margin: 40px;
+  white-space: pre-line;
+}
+
+.character-class-description {
+  margin-top: 20px;
 }
