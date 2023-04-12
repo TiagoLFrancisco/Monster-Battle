@@ -1,7 +1,6 @@
 import { Fragment } from "react";
 import "./CharacterCreation.css";
-import { CharacterClassDescription } from "./CharacterClassDescription";
-import { CharacterClasses } from "./CharacterClasses";
+import { CharacterClassList } from "./CharacterClassList";
 
 export const CharacterCreation = (
   setGameViewIs,
@@ -35,21 +34,25 @@ export const CharacterCreation = (
       <h2>To start, select a hero class!</h2>
 
       <div>
-        {CharacterClasses.map((className) => (
+        {Object.keys(CharacterClassList).map((charClass) => (
           <button
             className="class-name-buttons"
-            key={className}
-            onClick={() => handleClassClick(className)}
+            key={charClass}
+            onClick={() => handleClassClick(charClass)}
           >
-            {className}
+            {CharacterClassList[charClass].name}
           </button>
         ))}
       </div>
       {isClassSelected && (
         <Fragment>
-          <div className="character-class-description">
-            {CharacterClassDescription[playerClass]}
-          </div>
+          <h3 className="character-class-h3">Class Preview:</h3>
+          <p>Description: {CharacterClassList[playerClass].name}</p>
+          <p>Description: {CharacterClassList[playerClass].description}</p>
+          <p>Starting HP: {CharacterClassList[playerClass].health}</p>
+          <p>Base Damage: {CharacterClassList[playerClass].damage}</p>
+          <p></p>
+          <h3 className="character-class-h3">Class Confirmation:</h3>
           <p>Are you sure you want to be a {playerClass} ?</p>
           <button onClick={handleConfirmClassClick}>Confirm</button>
         </Fragment>
