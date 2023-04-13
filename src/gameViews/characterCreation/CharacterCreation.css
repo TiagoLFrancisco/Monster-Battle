@@ -1,16 +1,16 @@
 .character-creation-page {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   background-color: #1e1e1e;
   color: white;
   height: 100vh;
+  white-space: pre-line;
 }
 
 .character-creation-page-tittle {
   font-size: 48px;
-  margin-top: 0;
+  margin-top: 65px;
   font-family: "Cinzel Decorative", cursive;
 }
 

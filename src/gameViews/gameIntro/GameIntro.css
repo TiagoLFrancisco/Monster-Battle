@@ -1,26 +1,25 @@
+/* Default styles */
 .game-intro-page {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  background-color: #1e1e1e;
+  color: #fff;
   height: 100vh;
-  background-color: #1c1c1c;
-  color: white;
-  font-family: "Cinzel Decorative", cursive;
+  white-space: pre-line;
+  font-family: "EB Garamond", serif;
 }
 
 .game-intro-page-tittle {
-  font-size: 3rem;
-  margin-bottom: 2rem;
-}
-
-.description-tittle {
-  font-size: 1.5rem;
-  margin-top: 2rem;
+  margin-top: 60px;
+  font-size: 2.6rem;
+  text-align: center;
+  margin-bottom: 1rem;
+  font-family: "Cinzel Decorative", cursive;
 }
 
 .description-text {
-  font-weight: bold;
+  font-size: 1.7rem;
 }
 
 .chose-name-tittle {
@@ -29,41 +28,49 @@
 }
 
 .enter-name-label {
-  font-size: 1.2rem;
   display: flex;
+  flex-direction: row;
+  justify-content: center;
   align-items: center;
+  font-size: 1.8rem;
   margin-top: 1rem;
 }
 
-.enter-name-input-box {
-  font-size: 1.2rem;
-  margin-left: 1rem;
+.enter-name-label input {
   padding: 0.5rem;
+  font-size: 1.2rem;
+  margin-left: 0.5rem;
+  border: 1px solid #fff;
+  background-color: transparent;
+  color: #fff;
   border-radius: 5px;
-  border: none;
+}
+
+.enter-name-label input:focus {
+  outline: none;
 }
 
 .ready-message {
-  font-size: 1.2rem;
+  font-size: 1.8rem;
   margin-top: 2rem;
 }
 
 .big-emojis {
-  font-size: 2rem;
+  font-size: 2.5rem;
 }
 
 .start-adventure-button {
-  font-size: 1.2rem;
   margin-top: 2rem;
-  padding: 0.5rem 1.5rem;
-  border-radius: 5px;
+  padding: 1rem 2rem;
   border: none;
-  background-color: #c40000;
-  color: white;
+  border-radius: 5px;
+  background-color: #ff6f00;
+  color: #fff;
+  font-size: 1.2rem;
   cursor: pointer;
 }
 
 .start-adventure-button:disabled {
   opacity: 0.5;
-  cursor: not-allowed;
+  cursor: default;
 }

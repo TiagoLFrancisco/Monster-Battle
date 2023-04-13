@@ -1,17 +1,15 @@
-import "./GameIntro copy.css";
+import "./GameIntro.css";
 
 export const GameIntro = (setGameViewIs, playerName, setPlayerName) => {
   const gameTittle = "DnD Monster Battle";
-  const description = `Welcome Adventurer! Against all odds, you are here!
-  
-  In this game, you will embody a brave Hero that is going on an adventure!
+  const description = `Welcome adventurer, to a world of magic and mystery! 
 
-  You will be able to defeat monsters, gain experience, become stronger!
-   
-  Use diferent weapons, magics, equipments and much more!
+  Gather your courage, sharpen your wit, and prepare to embark on an epic journey through lands 
+  filled with dragons, dungeons, and danger. Whether you are a mighty warrior, a wise wizard, 
+  or a cunning rogue, you will find challenges and rewards aplenty in this fantastical realm.
 
-
-  `;
+  So gather your party and set forth, for adventure awaits! 
+  May the roll of the dice be ever in your favor!`;
 
   const changeViewHandler = () => {
     setGameViewIs(1);
@@ -20,16 +18,17 @@ export const GameIntro = (setGameViewIs, playerName, setPlayerName) => {
   return (
     <div className="game-intro-page">
       <h1 className="game-intro-page-tittle">
-        🧝🏼 Welcome to the {gameTittle} v.0.01! 🧙🏻
+        🧝🏼&nbsp;&nbsp;Welcome to the {gameTittle}!&nbsp;&nbsp;🧚‍♀️
       </h1>
-      <h4 className="description-tittle">
-        Description: <span className="description-text">{description}</span>
-      </h4>
-      <h4 className="chose-name-tittle">
+
+      <p className="description-text">{description}</p>
+
+      <p className="chose-name-tittle">
+        <span className="big-emojis">🧙🏻‍♀️&nbsp;&nbsp;</span>
         Please, choose a name to begin your adventure!
-      </h4>
+        <span className="big-emojis">&nbsp;&nbsp;🧙🏻</span>
+      </p>
       <label className="enter-name-label">
-        Enter your name:&nbsp;&nbsp;&nbsp;
         <input
           className="enter-name-input-box"
           type="text"
@@ -37,10 +36,6 @@ export const GameIntro = (setGameViewIs, playerName, setPlayerName) => {
           onChange={(e) => setPlayerName(e.target.value)}
         />
       </label>
-      <p className="ready-message">
-        Are you ready to start {playerName} ?{" "}
-        <span className="big-emojis">&nbsp;🧙🏻‍♀️</span>
-      </p>
       <button
         className="start-adventure-button"
         disabled={playerName === "" || playerName.length < 3}
