@@ -6,3 +6,11 @@
 .character-class-description {
   margin-top: 20px;
 }
+
+.description-text {
+  font-weight: normal;
+}
+
+.emojis {
+  font-size: xx-large;
+}

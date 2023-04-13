@@ -20,10 +20,11 @@ function App() {
   const [isClassSelected, setIsClassSelected] = useState(false);
   const [playerWeapon, setPlayerWeapon] = useState(null);
   const [playerWeaponDamage, setPlayerWeaponDamage] = useState(0);
+  const [playerName, setPlayerName] = useState("");
 
   function getView() {
     if (gameViewIs === 0) {
-      return GameIntro(setGameViewIs);
+      return GameIntro(setGameViewIs, playerName, setPlayerName);
     } else if (gameViewIs === 1) {
       return CharacterCreation(
         setGameViewIs,
