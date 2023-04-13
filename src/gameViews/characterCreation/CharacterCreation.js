@@ -7,13 +7,21 @@ export const CharacterCreation = (
   playerClass,
   setPlayerClass,
   isClassSelected,
-  setIsClassSelected
+  setIsClassSelected,
+  setPlayerMaxHealth,
+  setPlayerInitialDamage,
+  setPlayerEmoji,
+  setPlayerCurrentHealth
 ) => {
-  const characterCreationMessage = `Welcome to the Character Creation page! Here, you can choose your character's class to begin your journey!
-    Choose wisely, adventurer, as your class will determine your unique abilities and playstyle!`;
+  const characterCreationMessage = `Welcome to the Character Creation! Here, you can choose your character's class to begin your journey!
+  Choose wisely, adventurer, as your class will determine your unique abilities and playstyle!`;
 
   function handleClassClick(classSelected) {
     setPlayerClass(classSelected);
+    setPlayerMaxHealth(CharacterClassList[classSelected].health);
+    setPlayerInitialDamage(CharacterClassList[classSelected].damage);
+    setPlayerEmoji(CharacterClassList[classSelected].emoji);
+    setPlayerCurrentHealth(CharacterClassList[classSelected].health);
     setIsClassSelected(true);
   }
 
@@ -23,18 +31,11 @@ export const CharacterCreation = (
 
   return (
     <div className="character-creation-page">
-      <div>
-        <h1 className="character-creation-page-tittle">
-          Character Selection &nbsp;&nbsp;📜🖋️
-        </h1>
-      </div>
-
-      <div>
-        <p className="character-creation-message">{characterCreationMessage}</p>
-      </div>
-
-      <h2 className="select-class-tittle">To start, select a hero class!</h2>
-
+      <h1 className="character-creation-page-tittle">
+        Character Creation &nbsp;&nbsp;📜🖋️
+      </h1>
+      <p className="page-description-text">{characterCreationMessage}</p>
+      <p className="select-class-tittle">To start, select a hero class!</p>
       <div className="buttons-div">
         {Object.keys(CharacterClassList).map((charClass) => (
           <button
@@ -43,26 +44,27 @@ export const CharacterCreation = (
             onClick={() => handleClassClick(charClass)}
           >
             {CharacterClassList[charClass].name}
+            {CharacterClassList[charClass].emoji}
           </button>
         ))}
       </div>
       {isClassSelected && (
         <Fragment>
-          <h3 className="class-preview-tittle">Class Preview:</h3>
-          <p className="player-name">
-            Description: {CharacterClassList[playerClass].name}
-          </p>
-          <p className="class-description">
-            Description: {CharacterClassList[playerClass].description}
-          </p>
-          <p className="player-health">
-            Starting HP: {CharacterClassList[playerClass].health}
-          </p>
-          <p className="player-damage">
-            Base Damage: {CharacterClassList[playerClass].damage}
-          </p>
+          <div className="player-class-stats">
+            <p className="player-name">
+              {CharacterClassList[playerClass].name}
+            </p>
+            <p className="class-description">
+              {CharacterClassList[playerClass].description}
+            </p>
+            <p className="player-health">
+              Starting HP: {CharacterClassList[playerClass].health}
+            </p>
+            <p className="player-damage">
+              Base Damage: {CharacterClassList[playerClass].damage}
+            </p>
+          </div>
 
-          <h3 className="class-confirmation-tittle">Class Confirmation:</h3>
           <p className="class-confirmation-message">
             You have selected {playerClass} as your class.
           </p>

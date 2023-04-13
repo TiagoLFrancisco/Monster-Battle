@@ -2,35 +2,33 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #1e1e1e;
+  background-color: #343434;
   color: white;
-  height: 100vh;
+  min-height: 100vh;
   white-space: pre-line;
+  font-family: "EB Garamond", serif;
 }
 
 .character-creation-page-tittle {
-  font-size: 48px;
-  margin-top: 65px;
+  margin-top: 3rem;
+  font-size: 2.6rem;
+  text-align: center;
   font-family: "Cinzel Decorative", cursive;
 }
 
-.character-creation-message {
-  font-size: 24px;
-  margin-top: 20px;
-  text-align: center;
+.page-description-text {
+  font-size: 1.7rem;
+  text-align: left;
 }
 
 .select-class-tittle {
-  font-size: 32px;
-  margin-top: 40px;
+  font-size: 1.7rem;
+  margin-top: 0px;
 }
 
 .buttons-div {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  margin-top: 20px;
+  max-width: 1000px;
+  text-align: center;
 }
 
 .char-class-name-button {
@@ -38,67 +36,71 @@
   border: none;
   border-radius: 4px;
   color: white;
-  font-size: 24px;
+  font-size: 1.5rem;
   margin: 10px;
   padding: 10px;
   cursor: pointer;
 }
 
 .char-class-name-button:hover {
-  background-color: #777777;
+  background-color: #777777 !important;
+}
+
+.player-class-stats {
+  border: 2px solid white;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-top: 2rem;
 }
 
 .class-preview-tittle {
-  font-size: 24px;
-  margin-top: 40px;
+  font-size: 1.5rem;
 }
 
 .player-name {
-  font-size: 24px;
-  margin-top: 20px;
-  text-align: center;
+  font-size: 1.6rem;
+  font-weight: 500;
 }
 
 .class-description {
-  font-size: 18px;
-  margin-top: 10px;
-  text-align: center;
+  font-size: 1.4rem;
+  max-width: 800px;
 }
 
 .player-health {
-  font-size: 18px;
-  margin-top: 10px;
-  text-align: center;
+  font-size: 1.2rem;
+  margin-top: 1rem;
 }
 
 .player-damage {
-  font-size: 18px;
-  margin-top: 10px;
-  text-align: center;
+  font-size: 1.2rem;
+  margin-top: 1rem;
 }
 
 .class-confirmation-tittle {
-  font-size: 24px;
-  margin-top: 40px;
+  font-size: 1.7rem;
+  margin-top: 2rem;
 }
 
 .class-confirmation-message {
   font-size: 18px;
-  margin-top: 20px;
   text-align: center;
+  font-size: 1.7rem;
+  text-align: left;
 }
 
 .class-confirmation-button {
-  background-color: #555555;
+  background-color: #777777;
+  margin-top: 1rem;
+  padding: 1rem 3rem;
   border: none;
-  border-radius: 4px;
-  color: white;
-  font-size: 24px;
-  margin-top: 20px;
-  padding: 10px;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 1.2rem;
   cursor: pointer;
+  margin-bottom: 20px;
 }
 
 .class-confirmation-button:hover {
-  background-color: #777777;
+  background-color: #0d775b;
 }

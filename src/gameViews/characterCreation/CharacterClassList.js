@@ -1,86 +1,86 @@
 export const CharacterClassList = {
-  Barbarian: {
-    name: "Barbarian",
-    description:
-      "A fierce warrior who channels their rage to become stronger in battle.",
-    health: 20,
-    damage: 4,
-  },
-  Bard: {
-    name: "Bard",
-    description:
-      "A versatile performer who uses their music and magic to support their allies and manipulate their foes.",
-    health: 12,
-    damage: 2,
-  },
-  Cleric: {
-    name: "Cleric",
-    description:
-      "A devout servant of a deity who wields divine magic to heal allies, smite enemies, and protect the innocent.",
-    health: 16,
-    damage: 3,
-  },
-  Druid: {
-    name: "Druid",
-    description:
-      "A nature-based spellcaster who can take on animal forms and harness the power of the elements.",
-    health: 14,
-    damage: 2,
-  },
-  Fighter: {
-    name: "Fighter",
-    description:
-      "A skilled warrior who excels in combat and can specialize in a variety of weapons and fighting styles.",
-    health: 18,
-    damage: 3,
-  },
-  Monk: {
-    name: "Monk",
-    description:
-      "A disciplined martial artist who can harness their chi to perform incredible feats and even cast spells.",
-    health: 14,
-    damage: 2,
-  },
-  Paladin: {
-    name: "Paladin",
-    description:
-      "A holy knight who fights for righteousness and justice, wielding divine magic to protect their allies and smite their foes.",
-    health: 18,
-    damage: 3,
-  },
-  Ranger: {
-    name: "Ranger",
-    description:
-      "A skilled outdoorsman who can track prey, survive in the wilderness, and specialize in ranged combat.",
-    health: 16,
-    damage: 2,
-  },
-  Rogue: {
-    name: "Rogue",
-    description:
-      "A cunning thief who excels at stealth, lockpicking, and backstabbing, using their agility and wit to outsmart their foes.",
-    health: 12,
-    damage: 2,
+  Wizard: {
+    name: "Wizard",
+    description: `Scholar of arcane magic, wielding spells through mastery of ancient knowledge, and capable of shaping reality to their will.`,
+    health: 177,
+    damage: 20,
+    emoji: "🧙‍♂️",
   },
   Sorcerer: {
     name: "Sorcerer",
-    description:
-      "A spellcaster who is born with innate magical abilities and can unleash powerful elemental forces with their spells.",
-    health: 12,
-    damage: 3,
+    description: `Born with innate magical powers, able to cast spells through sheer force of will, and manipulating the fabric of reality.`,
+    health: 155,
+    damage: 19,
+    emoji: "🧙‍♀️",
   },
   Warlock: {
     name: "Warlock",
-    description:
-      "A spellcaster who gains their powers through a pact with a powerful extraplanar entity, using dark magic to control their enemies.",
-    health: 14,
-    damage: 3,
+    description: `Pact-bound wielder of eldritch power, making deals with otherworldly beings to gain abilities, spells, and other advantages.`,
+    health: 155,
+    damage: 18,
+    emoji: "💀",
   },
-  Wizard: {
-    name: "Wizard",
-    description:
-      "A studious scholar who learns to cast spells through rigorous study and experimentation, wielding incredible magical power but lacking in physical combat abilities.",
-    health: 10,
-    damage: 1,
+  Rogue: {
+    name: "Rogue",
+    description: `Stealthy and cunning, skilled in theft, assassination, and trickery, and able to disable traps and locks.`,
+    health: 155,
+    damage: 17,
+    emoji: "👥",
+  },
+  Bard: {
+    name: "Bard",
+    description: `Skilled performer who uses music and magic to charm, inspire, and deceive others in equal measure.`,
+    health: 160,
+    damage: 16,
+    emoji: "🎵",
+  },
+  Ranger: {
+    name: "Ranger",
+    description: `Hunter and tracker, who moves through wilderness with ease, strikes from range with deadly accuracy, and forms bonds with animals.`,
+    health: 205,
+    damage: 15,
+    emoji: "🎯",
+  },
+  Fighter: {
+    name: "Fighter",
+    description: `Master of combat, skilled in a variety of weapons and techniques, and able to endure great physical punishment.`,
+    health: 240,
+    damage: 14,
+    emoji: "🗡️",
+  },
+  Monk: {
+    name: "Monk",
+    description: `Disciplined warrior, who channels their inner energy to strike with deadly precision and move with incredible speed.`,
+    health: 164,
+    damage: 13,
+    emoji: "🤜",
+  },
+  Barbarian: {
+    name: "Barbarian",
+    description: `Fierce warrior who embraces primal nature, using brute strength and raw power to crush enemies.`,
+    health: 300,
+    damage: 12,
+    emoji: "😠",
+  },
+  Paladin: {
+    name: "Paladin",
+    description: `Holy knight, who draws power from their faith and a sacred oath to smite evil, heal allies, and defend the innocent.`,
+    health: 215,
+    damage: 11,
+    emoji: "🛡️",
+  },
+  Cleric: {
+    name: "Cleric",
+    description: `Devout servant of a deity, wielding divine magic to heal allies, banish foes, and uphold their faith.`,
+    health: 195,
+    damage: 10,
+    emoji: "✝️",
+  },
+  Druid: {
+    name: "Druid",
+    description: `Protector of nature, shapeshifter, and wielder of primal magic that harnesses the power of the natural world.`,
+    health: 190,
+    damage: 10,
+    emoji: "🌿",
   },
 };
