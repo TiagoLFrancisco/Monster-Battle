@@ -17,8 +17,6 @@ export const GameIntro = (setGameViewIs, playerName, setPlayerName) => {
 
   const colors = [
     "#E84A5F",
-    "#FFA07A",
-    "#FFC300",
     "#3C8DBC",
     "#9B59B6",
     "#27AE60",

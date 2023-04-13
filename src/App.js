@@ -12,15 +12,17 @@ function App() {
   const [currentMonster, setCurrentMonster] = useState(monsters[0]);
   const [monsterHealth, setMonsterHealth] = useState(currentMonster.health);
   const [monsterDamage, setMonsterDamage] = useState(0);
-  const [playerMaxHealth, setPlayerMaxHealth] = useState(200);
-  const [playerHealth, setPlayerHealth] = useState(playerMaxHealth);
-  const [playerDamage, setPlayerDamage] = useState(0);
+  const [playerMaxHealth, setPlayerMaxHealth] = useState(0);
+  const [playerCurrentHealth, setPlayerCurrentHealth] = useState(0);
+  const [playerRoundDamage, setPlayeRoundDamage] = useState(0);
   const [playerLevel, setPlayerLevel] = useState(1);
   const [playerClass, setPlayerClass] = useState("");
   const [isClassSelected, setIsClassSelected] = useState(false);
   const [playerWeapon, setPlayerWeapon] = useState(null);
   const [playerWeaponDamage, setPlayerWeaponDamage] = useState(0);
   const [playerName, setPlayerName] = useState("");
+  const [playerInitialDamage, setPlayerInitialDamage] = useState(0);
+  const [playerEmoji, setPlayerEmoji] = useState("");
 
   function getView() {
     if (gameViewIs === 0) {
@@ -31,7 +33,11 @@ function App() {
         playerClass,
         setPlayerClass,
         isClassSelected,
-        setIsClassSelected
+        setIsClassSelected,
+        setPlayerMaxHealth,
+        setPlayerInitialDamage,
+        setPlayerEmoji,
+        setPlayerCurrentHealth
       );
     } else if (gameViewIs === 2) {
       return WeaponSelection(
@@ -53,11 +59,15 @@ function App() {
         monsterHealth,
         monsterDamage,
         playerLevel,
-        playerHealth,
-        playerDamage,
+        playerCurrentHealth,
+        playerRoundDamage,
         playerClass,
         playerWeapon,
-        playerWeaponDamage
+        playerWeaponDamage,
+        playerMaxHealth,
+        playerInitialDamage,
+        playerEmoji,
+        playerName
       );
     } else {
       return <p>other page</p>;
