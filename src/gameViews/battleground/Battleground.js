@@ -5,11 +5,15 @@ export function Battleground(
   monsterHealth,
   monsterDamage,
   playerLevel,
-  playerHealth,
-  playerDamage,
+  playerCurrentHealth,
+  playerRoundDamage,
   playerClass,
   playerWeapon,
-  playerWeaponDamage
+  playerWeaponDamage,
+  playerMaxHealth,
+  playerInitialDamage,
+  playerEmoji,
+  playerName
 ) {
   return (
     <div className="view-battleground">
@@ -28,14 +32,25 @@ export function Battleground(
             <p>Attack Damage: {monsterDamage}</p>
           </div>
           <div className="player-info">
-            <h2>Player</h2>
-            <p>Level: {playerLevel}</p>
-            <p>Health: {playerHealth} / 200</p>
-            <p>Attack Damage: {playerDamage}</p>
-            <p>Player Class: {playerClass}</p>
+            <h2>{playerName}</h2>
+            <p>💥 &nbsp;Damage Delt: {playerRoundDamage}</p>
+            <p>📚 &nbsp;Level: {playerLevel}</p>
             <p>
-              Weapon: {playerWeapon.name} {"("}+{playerWeaponDamage}
+              ❤️️ &nbsp;Current Health: {playerCurrentHealth} /{" "}
+              {playerMaxHealth}
+            </p>
+
+            <p>
+              {playerEmoji} &nbsp;Player Class: {playerClass}
+            </p>
+            <p>💚 &nbsp;Player Max Health: {playerMaxHealth} </p>
+            <p>🎇 &nbsp;Player Base Damage: {playerInitialDamage} </p>
+            <p>
+              🙌 Weapon: {playerWeapon.name} {"("}+{playerWeaponDamage}
               {" damage)"}
+            </p>
+            <p>
+              🎆 &nbsp;Total Damage: {playerInitialDamage + playerWeaponDamage}
             </p>
           </div>
         </div>
