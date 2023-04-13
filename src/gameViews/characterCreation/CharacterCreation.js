@@ -9,8 +9,8 @@ export const CharacterCreation = (
   isClassSelected,
   setIsClassSelected
 ) => {
-  const characterCreationMessage =
-    "Choose a hero class! \nEach class has a diferent max HP, atack bonus, weapons and more!";
+  const characterCreationMessage = `Welcome to the Character Creation page! Here, you can choose your character's class to begin your journey!
+    Choose wisely, adventurer, as your class will determine your unique abilities and playstyle!`;
 
   function handleClassClick(classSelected) {
     setPlayerClass(classSelected);
@@ -24,7 +24,9 @@ export const CharacterCreation = (
   return (
     <div className="character-creation-page">
       <div>
-        <h1 className="character-creation-page-tittle">Character Selection</h1>
+        <h1 className="character-creation-page-tittle">
+          Character Selection &nbsp;&nbsp;📜🖋️
+        </h1>
       </div>
 
       <div>
