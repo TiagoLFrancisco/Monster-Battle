@@ -18,7 +18,7 @@ export const GameIntro = (setGameViewIs, playerName, setPlayerName) => {
   return (
     <div className="game-intro-page">
       <h1 className="game-intro-page-tittle">
-        🧝🏼&nbsp;&nbsp;Welcome to the {gameTittle}!&nbsp;&nbsp;🧚‍♀️
+        🧝🏼&nbsp;&nbsp;Welcome to the {gameTittle}!&nbsp;&nbsp;🧝‍♀️
       </h1>
 
       <p className="description-text">{description}</p>
