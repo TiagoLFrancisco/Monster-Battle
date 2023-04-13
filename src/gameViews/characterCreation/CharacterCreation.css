@@ -1,12 +1,104 @@
-.view-character-creation {
-  margin: 40px;
-  white-space: pre-line;
+.character-creation-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #1e1e1e;
+  color: white;
+  height: 100vh;
 }
 
-.class-name-buttons {
+.character-creation-page-tittle {
+  font-size: 48px;
+  margin-top: 0;
+  font-family: "Cinzel Decorative", cursive;
+}
+
+.character-creation-message {
+  font-size: 24px;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.select-class-tittle {
+  font-size: 32px;
+  margin-top: 40px;
+}
+
+.buttons-div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.char-class-name-button {
+  background-color: #555555;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  font-size: 24px;
   margin: 10px;
+  padding: 10px;
+  cursor: pointer;
 }
 
-.character-class-h3 {
-  margin: 15px;
+.char-class-name-button:hover {
+  background-color: #777777;
+}
+
+.class-preview-tittle {
+  font-size: 24px;
+  margin-top: 40px;
+}
+
+.player-name {
+  font-size: 24px;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.class-description {
+  font-size: 18px;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.player-health {
+  font-size: 18px;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.player-damage {
+  font-size: 18px;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.class-confirmation-tittle {
+  font-size: 24px;
+  margin-top: 40px;
+}
+
+.class-confirmation-message {
+  font-size: 18px;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.class-confirmation-button {
+  background-color: #555555;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  font-size: 24px;
+  margin-top: 20px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.class-confirmation-button:hover {
+  background-color: #777777;
 }

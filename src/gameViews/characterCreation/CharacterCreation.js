@@ -9,7 +9,7 @@ export const CharacterCreation = (
   isClassSelected,
   setIsClassSelected
 ) => {
-  const characterCreationTutorialMessage =
+  const characterCreationMessage =
     "Choose a hero class! \nEach class has a diferent max HP, atack bonus, weapons and more!";
 
   function handleClassClick(classSelected) {
@@ -22,21 +22,21 @@ export const CharacterCreation = (
   }
 
   return (
-    <div className="view-character-creation">
-      <div className="character-creation-page-tittle">
-        <h1>Character Selection</h1>
+    <div className="character-creation-page">
+      <div>
+        <h1 className="character-creation-page-tittle">Character Selection</h1>
       </div>
-
-      <div className="character-creation-tutorial">
-        <p>{characterCreationTutorialMessage}</p>
-      </div>
-
-      <h2>To start, select a hero class!</h2>
 
       <div>
+        <p className="character-creation-message">{characterCreationMessage}</p>
+      </div>
+
+      <h2 className="select-class-tittle">To start, select a hero class!</h2>
+
+      <div className="buttons-div">
         {Object.keys(CharacterClassList).map((charClass) => (
           <button
-            className="class-name-buttons"
+            className="char-class-name-button"
             key={charClass}
             onClick={() => handleClassClick(charClass)}
           >
@@ -46,15 +46,30 @@ export const CharacterCreation = (
       </div>
       {isClassSelected && (
         <Fragment>
-          <h3 className="character-class-h3">Class Preview:</h3>
-          <p>Description: {CharacterClassList[playerClass].name}</p>
-          <p>Description: {CharacterClassList[playerClass].description}</p>
-          <p>Starting HP: {CharacterClassList[playerClass].health}</p>
-          <p>Base Damage: {CharacterClassList[playerClass].damage}</p>
-          <p></p>
-          <h3 className="character-class-h3">Class Confirmation:</h3>
-          <p>You have selected {playerClass} as your class.</p>
-          <button onClick={handleConfirmClassClick}>Confirm Class</button>
+          <h3 className="class-preview-tittle">Class Preview:</h3>
+          <p className="player-name">
+            Description: {CharacterClassList[playerClass].name}
+          </p>
+          <p className="class-description">
+            Description: {CharacterClassList[playerClass].description}
+          </p>
+          <p className="player-health">
+            Starting HP: {CharacterClassList[playerClass].health}
+          </p>
+          <p className="player-damage">
+            Base Damage: {CharacterClassList[playerClass].damage}
+          </p>
+
+          <h3 className="class-confirmation-tittle">Class Confirmation:</h3>
+          <p className="class-confirmation-message">
+            You have selected {playerClass} as your class.
+          </p>
+          <button
+            className="class-confirmation-button"
+            onClick={handleConfirmClassClick}
+          >
+            Confirm Class
+          </button>
         </Fragment>
       )}
     </div>

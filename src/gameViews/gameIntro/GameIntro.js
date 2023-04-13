@@ -1,4 +1,4 @@
-import "./GameIntro.css";
+import "./GameIntro copy.css";
 
 export const GameIntro = (setGameViewIs, playerName, setPlayerName) => {
   const gameTittle = "DnD Monster Battle";
@@ -18,25 +18,28 @@ export const GameIntro = (setGameViewIs, playerName, setPlayerName) => {
   };
 
   return (
-    <div className="view-game-intro">
-      <h1 className="tittle-game-intro">
+    <div className="game-intro-page">
+      <h1 className="game-intro-page-tittle">
         🧝🏼 Welcome to the {gameTittle} v.0.01! 🧙🏻
       </h1>
-      <h4 className="tittle-description">
+      <h4 className="description-tittle">
         Description: <span className="description-text">{description}</span>
       </h4>
-      <h4>Please, choose a name to begin your adventure!</h4>
-      <label>
+      <h4 className="chose-name-tittle">
+        Please, choose a name to begin your adventure!
+      </h4>
+      <label className="enter-name-label">
         Enter your name:&nbsp;&nbsp;&nbsp;
         <input
+          className="enter-name-input-box"
           type="text"
           value={playerName}
           onChange={(e) => setPlayerName(e.target.value)}
         />
       </label>
-      <p>
+      <p className="ready-message">
         Are you ready to start {playerName} ?{" "}
-        <span className="emojis">&nbsp;🧙🏻‍♀️</span>
+        <span className="big-emojis">&nbsp;🧙🏻‍♀️</span>
       </p>
       <button
         className="start-adventure-button"
