@@ -15,13 +15,26 @@ export const GameIntro = (setGameViewIs, playerName, setPlayerName) => {
     setGameViewIs(1);
   };
 
+  const colors = [
+    "#E84A5F",
+    "#FFA07A",
+    "#FFC300",
+    "#3C8DBC",
+    "#9B59B6",
+    "#27AE60",
+    "#F44336",
+    "#00BCD4",
+    "#FF9800",
+    "#34495E",
+  ];
+
   return (
     <div className="game-intro-page">
       <h1 className="game-intro-page-tittle">
         🧝🏼&nbsp;&nbsp;Welcome to the {gameTittle}!&nbsp;&nbsp;🧝‍♀️
       </h1>
 
-      <p className="description-text">{description}</p>
+      <p className="gi-page-description-text">{description}</p>
 
       <p className="chose-name-tittle">
         <span className="big-emojis">🧙🏻‍♀️&nbsp;&nbsp;</span>
@@ -40,6 +53,9 @@ export const GameIntro = (setGameViewIs, playerName, setPlayerName) => {
         className="start-adventure-button"
         disabled={playerName === "" || playerName.length < 3}
         onClick={changeViewHandler}
+        style={{
+          backgroundColor: colors[Math.floor(Math.random() * colors.length)],
+        }}
       >
         Start Adventure
       </button>
