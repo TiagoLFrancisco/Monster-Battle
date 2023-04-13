@@ -53,8 +53,8 @@ export const CharacterCreation = (
           <p>Base Damage: {CharacterClassList[playerClass].damage}</p>
           <p></p>
           <h3 className="character-class-h3">Class Confirmation:</h3>
-          <p>Are you sure you want to be a {playerClass} ?</p>
-          <button onClick={handleConfirmClassClick}>Confirm</button>
+          <p>You have selected {playerClass} as your class.</p>
+          <button onClick={handleConfirmClassClick}>Confirm Class</button>
         </Fragment>
       )}
     </div>

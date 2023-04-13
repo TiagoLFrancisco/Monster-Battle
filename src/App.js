@@ -4,6 +4,8 @@ import { GameIntro } from "./gameViews/gameIntro/GameIntro";
 import { Battleground } from "./gameViews/battleground/Battleground";
 import { monsters } from "./components/MonstersList";
 import { CharacterCreation } from "./gameViews/characterCreation/CharacterCreation";
+import { Inventory } from "./gameViews/inventory/Inventory";
+import { WeaponSelection } from "./gameViews/weaponSelection/WeaponSelection";
 
 function App() {
   const [gameViewIs, setGameViewIs] = useState(0);
@@ -16,6 +18,8 @@ function App() {
   const [playerLevel, setPlayerLevel] = useState(1);
   const [playerClass, setPlayerClass] = useState("");
   const [isClassSelected, setIsClassSelected] = useState(false);
+  const [playerWeapon, setPlayerWeapon] = useState(null);
+  const [playerWeaponDamage, setPlayerWeaponDamage] = useState(0);
 
   function getView() {
     if (gameViewIs === 0) {
@@ -29,6 +33,20 @@ function App() {
         setIsClassSelected
       );
     } else if (gameViewIs === 2) {
+      return WeaponSelection(
+        setPlayerWeapon,
+        playerWeapon,
+        setPlayerWeaponDamage,
+        setGameViewIs
+      );
+    } else if (gameViewIs === 3) {
+      return Inventory(
+        setGameViewIs,
+        setPlayerWeapon,
+        playerWeapon,
+        setPlayerWeaponDamage
+      );
+    } else if (gameViewIs === 4) {
       return Battleground(
         currentMonster,
         monsterHealth,
@@ -36,7 +54,9 @@ function App() {
         playerLevel,
         playerHealth,
         playerDamage,
-        playerClass
+        playerClass,
+        playerWeapon,
+        playerWeaponDamage
       );
     } else {
       return <p>other page</p>;

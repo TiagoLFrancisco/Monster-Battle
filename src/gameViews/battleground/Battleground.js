@@ -7,7 +7,9 @@ export function Battleground(
   playerLevel,
   playerHealth,
   playerDamage,
-  playerClass
+  playerClass,
+  playerWeapon,
+  playerWeaponDamage
 ) {
   return (
     <div className="view-battleground">
@@ -31,6 +33,10 @@ export function Battleground(
             <p>Health: {playerHealth} / 200</p>
             <p>Attack Damage: {playerDamage}</p>
             <p>Player Class: {playerClass}</p>
+            <p>
+              Weapon: {playerWeapon.name} {"("}+{playerWeaponDamage}
+              {" damage)"}
+            </p>
           </div>
         </div>
       </div>
