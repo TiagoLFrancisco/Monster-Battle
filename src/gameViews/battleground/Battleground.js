@@ -44,13 +44,14 @@ export function Battleground(
               {playerEmoji} &nbsp;Player Class: {playerClass}
             </p>
             <p>💚 &nbsp;Player Max Health: {playerMaxHealth} </p>
-            <p>🎇 &nbsp;Player Base Damage: {playerInitialDamage} </p>
+            <p>🎇 &nbsp;Player Class Damage: {playerInitialDamage} </p>
             <p>
-              🙌 Weapon: {playerWeapon.name} {"("}+{playerWeaponDamage}
+              🙌 Player Atack: {playerWeapon} {"("}+{playerWeaponDamage}
               {" damage)"}
             </p>
             <p>
-              🎆 &nbsp;Total Damage: {playerInitialDamage + playerWeaponDamage}
+              🎆 &nbsp;Player Total Damage:{" "}
+              {playerInitialDamage + playerWeaponDamage}
             </p>
           </div>
         </div>

@@ -30,16 +30,14 @@ export const CharacterCreation = (
   }
 
   return (
-    <div className="character-creation-page">
-      <h1 className="character-creation-page-tittle">
-        Character Creation &nbsp;&nbsp;📜🖋️
-      </h1>
-      <p className="page-description-text">{characterCreationMessage}</p>
+    <div className="cc-page-view">
+      <h1 className="cc-page-tittle">Character Creation &nbsp;&nbsp;📜🖋️</h1>
+      <p className="cc-page-description-text">{characterCreationMessage}</p>
       <p className="select-class-tittle">To start, select a hero class!</p>
-      <div className="buttons-div">
+      <div className="cc-buttons-div">
         {Object.keys(CharacterClassList).map((charClass) => (
           <button
-            className="char-class-name-button"
+            className="cc-class-name-button"
             key={charClass}
             onClick={() => handleClassClick(charClass)}
           >
@@ -65,11 +63,11 @@ export const CharacterCreation = (
             </p>
           </div>
 
-          <p className="class-confirmation-message">
+          <p className="cc-confirmation-message">
             You have selected {playerClass} as your class.
           </p>
           <button
-            className="class-confirmation-button"
+            className="cc-confirmation-button"
             onClick={handleConfirmClassClick}
           >
             Confirm Class

@@ -1,4 +1,4 @@
-.character-creation-page {
+.cc-page-view {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -9,14 +9,14 @@
   font-family: "EB Garamond", serif;
 }
 
-.character-creation-page-tittle {
+.cc-page-tittle {
   margin-top: 3rem;
   font-size: 2.6rem;
   text-align: center;
   font-family: "Cinzel Decorative", cursive;
 }
 
-.page-description-text {
+.cc-page-description-text {
   font-size: 1.7rem;
   text-align: left;
 }
@@ -26,12 +26,12 @@
   margin-top: 0px;
 }
 
-.buttons-div {
+.cc-buttons-div {
   max-width: 1000px;
   text-align: center;
 }
 
-.char-class-name-button {
+.cc-class-name-button {
   background-color: #555555;
   border: none;
   border-radius: 4px;
@@ -42,15 +42,16 @@
   cursor: pointer;
 }
 
-.char-class-name-button:hover {
+.cc-class-name-button:hover {
   background-color: #777777 !important;
 }
 
 .player-class-stats {
-  border: 2px solid white;
+  border: 2px solid rgb(153, 153, 153);
   padding-left: 20px;
   padding-right: 20px;
   margin-top: 2rem;
+  border-radius: 10px;
 }
 
 .class-preview-tittle {
@@ -77,19 +78,12 @@
   margin-top: 1rem;
 }
 
-.class-confirmation-tittle {
-  font-size: 1.7rem;
-  margin-top: 2rem;
-}
-
-.class-confirmation-message {
-  font-size: 18px;
+.cc-confirmation-message {
   text-align: center;
   font-size: 1.7rem;
-  text-align: left;
 }
 
-.class-confirmation-button {
+.cc-confirmation-button {
   background-color: #777777;
   margin-top: 1rem;
   padding: 1rem 3rem;
@@ -101,6 +95,6 @@
   margin-bottom: 20px;
 }
 
-.class-confirmation-button:hover {
+.cc-confirmation-button:hover {
   background-color: #0d775b;
 }

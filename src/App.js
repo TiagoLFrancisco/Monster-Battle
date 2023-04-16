@@ -6,23 +6,26 @@ import { monsters } from "./components/MonstersList";
 import { CharacterCreation } from "./gameViews/characterCreation/CharacterCreation";
 import { Inventory } from "./gameViews/inventory/Inventory";
 import { WeaponSelection } from "./gameViews/weaponSelection/WeaponSelection";
+import { ClassWeaponList } from "./gameViews/weaponSelection/ClassWeaponsList";
 
 function App() {
   const [gameViewIs, setGameViewIs] = useState(0);
+
   const [currentMonster, setCurrentMonster] = useState(monsters[0]);
   const [monsterHealth, setMonsterHealth] = useState(currentMonster.health);
   const [monsterDamage, setMonsterDamage] = useState(0);
+
+  const [playerName, setPlayerName] = useState("");
+  const [playerEmoji, setPlayerEmoji] = useState("");
   const [playerMaxHealth, setPlayerMaxHealth] = useState(0);
   const [playerCurrentHealth, setPlayerCurrentHealth] = useState(0);
   const [playerRoundDamage, setPlayeRoundDamage] = useState(0);
   const [playerLevel, setPlayerLevel] = useState(1);
   const [playerClass, setPlayerClass] = useState("");
   const [isClassSelected, setIsClassSelected] = useState(false);
-  const [playerWeapon, setPlayerWeapon] = useState(null);
+  const [playerWeapon, setPlayerWeapon] = useState("");
   const [playerWeaponDamage, setPlayerWeaponDamage] = useState(0);
-  const [playerName, setPlayerName] = useState("");
   const [playerInitialDamage, setPlayerInitialDamage] = useState(0);
-  const [playerEmoji, setPlayerEmoji] = useState("");
 
   function getView() {
     if (gameViewIs === 0) {
@@ -44,7 +47,8 @@ function App() {
         setPlayerWeapon,
         playerWeapon,
         setPlayerWeaponDamage,
-        setGameViewIs
+        setGameViewIs,
+        playerClass
       );
     } else if (gameViewIs === 3) {
       return Inventory(

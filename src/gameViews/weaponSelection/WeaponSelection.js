@@ -1,44 +1,60 @@
 import "./WeaponSelection.css";
+import { ClassWeaponList } from "./ClassWeaponsList";
+import { CharacterClassList } from "../characterCreation/CharacterClassList";
 
 export const WeaponSelection = (
   setPlayerWeapon,
   playerWeapon,
   setPlayerWeaponDamage,
-  setGameViewIs
+  setGameViewIs,
+  playerClass
 ) => {
+  const mainAtackSelectionMessage = `As you prepare to embark on your journey through the realms, it's time to choose your attack strategy. 
+  Whether you prefer to wield a sword or cast spells, your success in battle relies on your skill in selecting the right attacks at the right time. So choose wisely, and let the dice roll in your favor!`;
+
+  const selectAttackTittle = `And since you are a ${playerClass} ${CharacterClassList[playerClass].emoji} you can chose one of these three attacks:`;
+
   const handleSelectWeapon = (weapon) => {
-    setPlayerWeapon(weapon);
-    setPlayerWeaponDamage(weapon.weaponDamage);
+    setPlayerWeapon(weapon.name);
+    setPlayerWeaponDamage(weapon.damage);
   };
 
-  const weapons = [
-    { name: "Sword", id: 1, weaponDamage: 2 },
-    { name: "Axe", id: 2, weaponDamage: 4 },
-    { name: "Bow", id: 3, weaponDamage: 6 },
-  ];
-
-  function handleCloseInventory() {
+  function handleConfirmWeapon() {
     setGameViewIs(4);
   }
 
+  const weapons = ClassWeaponList[playerClass];
+
   return (
-    <div className="weapon-selection-view">
-      <h2>Select your weapon:</h2>
-      {weapons.map((weapon) => (
-        <button
-          className="weapons-name-buttons"
-          key={weapon.id}
-          onClick={() => handleSelectWeapon(weapon)}
-        >
-          {weapon.name}
-        </button>
-      ))}
-      {playerWeapon && (
-        <p>You have selected {playerWeapon.name} as your weapon.</p>
-      )}
-      <div>
-        <button onClick={handleCloseInventory}>Confirm Weapon</button>
+    <div className="ws-page-view">
+      <h1 className="ws-page-tittle">Main attack selection &nbsp;&nbsp;🔱</h1>
+      <p className="ws-page-description-text">{mainAtackSelectionMessage}</p>
+      <p className="ws-select-attack-tittle">{selectAttackTittle}</p>
+      <div className="ws-button-div">
+        {weapons.map((weapon) => (
+          <button
+            className="ws-weapon-name-buttons"
+            key={weapon.id}
+            onClick={() => handleSelectWeapon(weapon)}
+          >
+            {weapon.name}
+          </button>
+        ))}
       </div>
+      {playerWeapon && (
+        <div>
+          <p className="ws-confirmation-message">
+            You have selected {playerWeapon} as your main attack.
+          </p>
+          <button
+            className="ws-confirmation-button"
+            disabled={playerWeapon === ""}
+            onClick={handleConfirmWeapon}
+          >
+            Confirm main attack
+          </button>
+        </div>
+      )}
     </div>
   );
 };
